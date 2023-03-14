@@ -4,22 +4,28 @@
 #define MINCPF 11
 
 #include <string>
+#include <cctype>
 #include <iostream>
-using std::string, std::cin,std::cout;
+
+using std::string, std::cin,std::cout,std::endl;
 
 class Pessoa{
 public:
-Pessoa(/*/nome, cpf*/);
+Pessoa(string,int[],char[]);
 
-void setCPF();
-void setNome();
+void setNome(string);
+void setCPF(string);
+void validarCpf(int[]);
 
-void getNome();
-void getCPF();
+string getNome(){return Pnome;};
+string getCPF(){return Pcpf;}
+string getCpfValido(){return PcpfValido;}
+
+void print();
 
 private:
-string nome;
-long int cpf;
-long int cpfValido;
+string Pnome;
+string Pcpf;
+string PcpfValido;
 };
 #endif
